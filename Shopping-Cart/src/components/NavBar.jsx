@@ -5,13 +5,19 @@ export default function NavBar() {
       <h1>Luxa Shopping</h1>
       <div className="navBarInternals">
         <h2>
-          <Link to="/home">Home</Link>
+          <Link to="/home" style={{ textDecoration: "none", color: "white" }}>
+            Home
+          </Link>
         </h2>
         <h2>
-          <Link to="/shop">Shop</Link>
+          <Link to="/shop" style={{ textDecoration: "none", color: "white" }}>
+            Shop
+          </Link>
         </h2>
         <h2>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart" style={{ textDecoration: "none", color: "white" }}>
+            Cart
+          </Link>
         </h2>
       </div>
     </>

@@ -1,13 +1,28 @@
+import { useNavigate } from "react-router-dom";
 import bag from "../assets/shoppingBag.svg";
 export default function Nav() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="mainHeading">
         <div className="companyName">
-          <h1>Luxa</h1>
+          <h1
+            onClick={() => {
+              navigate("/home");
+            }}
+          >
+            Luxa
+          </h1>
         </div>
         <div>
-          <img src={bag} className="bag"></img>
+          <img
+            src={bag}
+            className="bag"
+            onClick={() => {
+              navigate("/cart");
+            }}
+          ></img>
         </div>
       </div>
     </>
