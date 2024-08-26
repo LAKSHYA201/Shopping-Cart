@@ -15,7 +15,7 @@ export default function Nav() {
             Luxa
           </h1>
         </div>
-        <div>
+        <div className="cartIconHolder">
           <img
             src={bag}
             className="bag"
@@ -23,6 +23,16 @@ export default function Nav() {
               navigate("/cart");
             }}
           ></img>
+        </div>
+        <div className="itemsCountHolder">
+          <button
+            className="itemsCount"
+            onClick={() => {
+              navigate("/cart");
+            }}
+          >
+            100
+          </button>
         </div>
       </div>
     </>

@@ -30,12 +30,35 @@
 }
 .mainHeading {
   display: grid;
-  grid-template-columns: 9fr 1fr;
+  grid-template-columns: 20fr 2fr 0.4fr;
   padding: 15px;
   justify-content: space-between;
   font-family: "New Amsterdam", sans-serif;
   letter-spacing: 3px;
   font-size: x-large;
+}
+.cartIconHolder {
+  display: flex;
+  justify-content: end;
+}
+.itemsCountHolder {
+  display: flex;
+  align-items: end;
+  margin-right: 40px;
+  padding-bottom: 10px;
+}
+.itemsCount {
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 40px;
+}
+.itemsCount:hover {
+  background-color: rgb(159, 159, 20);
+  cursor: pointer;
 }
 .companyName {
   display: flex;
