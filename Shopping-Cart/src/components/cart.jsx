@@ -8,8 +8,21 @@ export default function Cart() {
   } = useOutletContext();
   return (
     <>
-      <h1>{addedIntoCartPrice}</h1>
-      <h1>{addedIntoCartURL}</h1>
+      <div className="cartPage">
+        <h1 style={{ marginLeft: "5%" }}>Cart</h1>
+
+        {addedIntoCartURL.map((url) => (
+          <div className="cartItem" key={url}>
+            {" "}
+            {/* Added key attribute */}
+            <img src={url} /> {/* Added closing tag for img */}
+            <div className="cartItemDetails">
+              <h2>4.99$</h2>
+              <button>Buy</button>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
