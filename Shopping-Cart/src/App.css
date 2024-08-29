@@ -55,10 +55,12 @@
   width: 35px;
   position: absolute;
   right: 40px;
+  transition: 300ms ease-in-out;
 }
 .itemsCount:hover {
-  background-color: rgb(159, 159, 20);
+  background-color: rgb(75, 75, 75);
   cursor: pointer;
+  transform: scale(1.1);
 }
 .companyName {
   display: flex;
@@ -85,6 +87,10 @@
 }
 .pages {
   height: 100%;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
 }
 .homePage {
   height: 100%;
@@ -125,4 +131,42 @@
 .imageSlider {
   display: flex;
   justify-content: center;
+}
+.shopPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.shopItemsHolder {
+  display: flex;
+  height: fit-content;
+  margin: 3%;
+}
+.shopItem {
+  display: grid;
+  grid-template-rows: 6.5fr 3.5fr;
+  height: 300px;
+  width: 250px;
+  border: solid black 1px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.35);
+  margin: 2%;
+  transition: transform 250ms ease-in-out;
+}
+.shopItem:hover {
+  transform: scale(1.1);
+}
+.details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.addToCartBtn {
+  height: 50px;
+  width: 90px;
+  background-color: rgb(209, 52, 0);
+  border-radius: 25%;
+}
+.addToCartBtn:hover {
+  cursor: pointer;
+  background-color: aqua;
 }

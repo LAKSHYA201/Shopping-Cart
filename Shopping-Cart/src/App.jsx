@@ -1,10 +1,18 @@
 import { Outlet } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Nav from "./components/nav";
-import Home from "./components/Home";
 
 function App() {
+  const [addedIntoCartURL, setAddedIntoCartURL] = useState([]);
+  const [addedIntoCartPrice, setAddedIntoCartPrice] = useState([]);
+  const contextValue = {
+    setAddedIntoCartPrice,
+    setAddedIntoCartURL,
+    addedIntoCartPrice,
+    addedIntoCartURL,
+  };
   return (
     <>
       <div className="navBar">
@@ -13,7 +21,7 @@ function App() {
       <div className="main">
         <Nav />
         <div className="pages">
-          <Outlet />
+          <Outlet context={contextValue} />
         </div>
       </div>
     </>

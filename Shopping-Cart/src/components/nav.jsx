@@ -31,7 +31,7 @@ export default function Nav() {
               navigate("/cart");
             }}
           >
-            100
+            3
           </button>
         </div>
       </div>
