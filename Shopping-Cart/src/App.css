@@ -1,20 +1,23 @@
 .navBar {
-  display: grid;
+  display: flex;
   background-color: rgb(23, 23, 23);
   color: white;
   padding: 20px;
-  grid-template-rows: 2fr 8fr;
+  flex-direction: column;
   justify-content: center;
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 3px;
+  justify-content: flex-start;
+  padding-top: 50px;
 }
 .navBarInternals {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 200px;
 }
 .navBarInternals h2 {
   margin-top: 75px;
@@ -165,10 +168,15 @@
   width: 90px;
   background-color: rgb(209, 52, 0);
   border-radius: 25%;
+  transition: 250ms ease-in-out;
 }
 .addToCartBtn:hover {
   cursor: pointer;
   background-color: aqua;
+}
+.addToCartBtn:active {
+  background-color: blueviolet;
+  color: white;
 }
 .cartPage {
   height: 100%;
@@ -180,7 +188,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  height: 18%;
+  height: 22%;
   width: 40%;
   margin: 3%;
   box-shadow: 0 20px 20px rgb(153, 153, 153);
@@ -207,4 +215,8 @@
   background-color: aqua;
   color: black;
   cursor: pointer;
+}
+.cartItemDetails button:active {
+  background-color: blueviolet;
+  color: white;
 }

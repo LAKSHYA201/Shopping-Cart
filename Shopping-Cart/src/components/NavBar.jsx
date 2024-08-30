@@ -4,9 +4,9 @@ export default function NavBar() {
     <>
       <h1>Luxa Shopping</h1>
       <div className="navBarInternals">
-        <h2>
+        <h2 id="home">
           <Link to="/home" style={{ textDecoration: "none", color: "white" }}>
-            Home
+            <div id="home">Home</div>
           </Link>
         </h2>
         <h2>

@@ -1,23 +1,18 @@
 import { useOutletContext } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 export default function Cart() {
-  const {
-    setAddedIntoCartPrice,
-    setAddedIntoCartURL,
-    addedIntoCartPrice,
-    addedIntoCartURL,
-  } = useOutletContext();
+  const { addedIntoCartPrice, addedIntoCartURL } = useOutletContext();
   return (
     <>
       <div className="cartPage">
         <h1 style={{ marginLeft: "5%" }}>Cart</h1>
 
-        {addedIntoCartURL.map((url) => (
-          <div className="cartItem" key={url}>
-            {" "}
-            {/* Added key attribute */}
-            <img src={url} /> {/* Added closing tag for img */}
+        {addedIntoCartURL.map((url, index) => (
+          <div className="cartItem" key={uuidv4()}>
+            {""}
+            <img src={url} />
             <div className="cartItemDetails">
-              <h2>4.99$</h2>
+              <h2>${addedIntoCartPrice[index]}</h2>
               <button>Buy</button>
             </div>
           </div>

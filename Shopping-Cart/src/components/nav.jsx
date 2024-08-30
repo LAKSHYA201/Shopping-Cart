@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 import bag from "../assets/shoppingBag.svg";
-export default function Nav() {
+export default function Nav({ noOfItems }) {
   const navigate = useNavigate();
 
   return (
@@ -31,10 +32,13 @@ export default function Nav() {
               navigate("/cart");
             }}
           >
-            3
+            {noOfItems}
           </button>
         </div>
       </div>
     </>
   );
 }
+Nav.propTypes = {
+  noOfItems: PropTypes.number.isRequired,
+};

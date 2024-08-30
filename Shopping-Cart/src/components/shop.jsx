@@ -2,12 +2,8 @@ import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
 export default function Shop() {
-  const {
-    setAddedIntoCartPrice,
-    setAddedIntoCartURL,
-    addedIntoCartPrice,
-    addedIntoCartURL,
-  } = useOutletContext();
+  const { setAddedIntoCartPrice, setAddedIntoCartURL, setNoOfAddedItems } =
+    useOutletContext();
   const [perfumeURL, setPerfumeURL] = useState([]);
   const [perfumePrice, setPerfumePrice] = useState([]);
   const [watchURL, setWatchURL] = useState([]);
@@ -125,6 +121,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, perfumeURL[0]]);
                   setAddedIntoCartPrice((prev) => [...prev, perfumePrice[0]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -140,6 +137,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, perfumeURL[1]]);
                   setAddedIntoCartPrice((prev) => [...prev, perfumePrice[1]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -155,6 +153,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, perfumeURL[2]]);
                   setAddedIntoCartPrice((prev) => [...prev, perfumePrice[2]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -170,6 +169,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, perfumeURL[3]]);
                   setAddedIntoCartPrice((prev) => [...prev, perfumePrice[3]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -185,6 +185,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, perfumeURL[4]]);
                   setAddedIntoCartPrice((prev) => [...prev, perfumePrice[4]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -202,6 +203,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, watchURL[0]]);
                   setAddedIntoCartPrice((prev) => [...prev, watchPrice[0]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -217,6 +219,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, watchURL[1]]);
                   setAddedIntoCartPrice((prev) => [...prev, watchPrice[1]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -232,6 +235,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, watchURL[2]]);
                   setAddedIntoCartPrice((prev) => [...prev, watchPrice[2]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -247,6 +251,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, watchURL[3]]);
                   setAddedIntoCartPrice((prev) => [...prev, watchPrice[3]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -262,6 +267,7 @@ export default function Shop() {
                 onClick={() => {
                   setAddedIntoCartURL((prev) => [...prev, watchURL[4]]);
                   setAddedIntoCartPrice((prev) => [...prev, watchPrice[4]]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -282,6 +288,7 @@ export default function Shop() {
                     ...prev,
                     sunglassesPrice[0],
                   ]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -300,6 +307,7 @@ export default function Shop() {
                     ...prev,
                     sunglassesPrice[1],
                   ]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -318,6 +326,7 @@ export default function Shop() {
                     ...prev,
                     sunglassesPrice[2],
                   ]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -336,6 +345,7 @@ export default function Shop() {
                     ...prev,
                     sunglassesPrice[3],
                   ]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
@@ -354,6 +364,7 @@ export default function Shop() {
                     ...prev,
                     sunglassesPrice[4],
                   ]);
+                  setNoOfAddedItems((current) => current + 1);
                 }}
               >
                 Add
