@@ -192,6 +192,10 @@
   width: 40%;
   margin: 3%;
   box-shadow: 0 20px 20px rgb(153, 153, 153);
+  transition: 250ms ease-in-out;
+}
+.cartItem:hover {
+  transform: scale(1.1);
 }
 .cartItem img {
   height: 150px;
